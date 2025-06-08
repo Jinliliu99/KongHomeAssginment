@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-08T07:43:37.376Z",
+    "end": "2025-06-08T07:43:42.019Z",
+    "duration": 4643,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "825a15e1-a88f-4e78-9691-17e8dd558302",
+      "title": "",
+      "fullFile": "cypress/e2e/workspaceValidation.cy.js",
+      "file": "cypress/e2e/workspaceValidation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a125da02-b70a-486f-be9c-42f9f44c9892",
+          "title": "Service and Route Creation and Deletion",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify that Service and Route can be created and deleted",
+              "fullTitle": "Service and Route Creation and Deletion Verify that Service and Route can be created and deleted",
+              "timedOut": null,
+              "duration": 4605,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let serviceName = \"example_service\";\nlet serviceUrl = \"https://httpbin.konghq.com\";\nlet routeName = \"mocking\";\nlet routePath = \"/mock\";\n_workspacePage.default.navigateToWorkspace('default');\n_workspacePage.default.createService(serviceName, serviceUrl);\n_workspacePage.default.createRoute(routeName, routePath, serviceName);\n_workspacePage.default.deleteRoute(routeName);\n_workspacePage.default.deleteService(serviceName);",
+              "err": {},
+              "uuid": "3e117b44-0529-499a-9f5c-5c1c2230bd48",
+              "parentUUID": "a125da02-b70a-486f-be9c-42f9f44c9892",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e117b44-0529-499a-9f5c-5c1c2230bd48"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4605,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Cypress Inline Reporter",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
